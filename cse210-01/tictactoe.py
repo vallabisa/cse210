@@ -9,6 +9,13 @@ def main():
     draw(board) == False
 
 
+def create_board():
+    board = []
+    square = 0
+    for square in range(9):
+        board.append(square+1)
+    return board
+
 
 def print_board(board):
     print()
