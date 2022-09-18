@@ -35,3 +35,13 @@ def draw(board):
         if board[square] != "x" and board[square] != "o":
             return False
     return True
+
+def next_player(current):
+    if current == "" or current == "o":
+        return "x"
+    elif current == "x":
+        return "o"
+
+def move(player, board):
+    square = int(input(f"{player}'s turn to choose a square (1-9): "))
+    board[square - 1] = player
