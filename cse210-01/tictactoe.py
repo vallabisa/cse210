@@ -5,7 +5,6 @@
 def main():
     player = next_player("")
     board = create_board()
-    
 
     while not (has_winner(board) or draw(board)):
         print_board(board)
@@ -15,9 +14,9 @@ def main():
     print_board(board)
     if has_winner(board) == True:
         if player == 'x':
-            print("Player x wins!")
-        elif player == 'o':
             print("Player o wins!")
+        elif player == 'o':
+            print("Player x wins!")
 
     elif has_winner(board) == False:
         print("It's a draw.")
