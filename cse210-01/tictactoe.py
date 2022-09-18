@@ -11,7 +11,7 @@ def main():
         move(player, board)
         player = next_player(player)
     
-    print_board(board)
+    print_board(board) 
     if has_winner(board) == True:
         if player == 'x':
             print("Player o wins!")
