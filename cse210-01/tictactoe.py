@@ -5,10 +5,9 @@
 def main():
     player = next_player("")
     board = create_board()
-    has_winner(board) == False
-    draw(board) == False
+    
 
-    while not (has_winner(board) == False and draw(board) == False):
+    while not (has_winner(board) or draw(board)):
         print_board(board)
         move(player, board)
         player = next_player(player)
