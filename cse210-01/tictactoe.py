@@ -8,6 +8,21 @@ def main():
     has_winner(board) == False
     draw(board) == False
 
+    while not (has_winner(board) == False and draw(board) == False):
+        print_board(board)
+        move(player, board)
+        player = next_player(player)
+    
+    print_board(board)
+    if has_winner(board) == True:
+        if player == 'x':
+            print("Player x wins!")
+        elif player == 'o':
+            print("Player o wins!")
+
+    elif has_winner(board) == False:
+        print("It's a draw.")
+    print("\nThank you for playing.")
 
 def create_board():
     board = []
@@ -45,3 +60,7 @@ def next_player(current):
 def move(player, board):
     square = int(input(f"{player}'s turn to choose a square (1-9): "))
     board[square - 1] = player
+
+
+if __name__ == "__main__":
+    main()
