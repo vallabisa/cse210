@@ -38,6 +38,9 @@ class Director:
             self.get_inputs()
             self.do_updates()
             self.do_outputs()
+            self.score = 0
+
+        print("Game over!")
 
     def get_inputs(self):
         """Ask the user if they want to roll.
@@ -79,4 +82,4 @@ class Director:
 
         print(f"You rolled: {values}")
         print(f"Your score is: {self.total_score}\n")
-        self.is_playing == (self.score > 0)
+        self.is_playing = (self.score > 0)
