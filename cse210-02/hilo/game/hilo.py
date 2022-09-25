@@ -6,7 +6,7 @@ class Hilo:
    
     Attributes:
         value (int): The value of the drawn card.
-        points (int): The number of points the die is worth.
+        points (int): The number of points the guess is worth.
     """
     def __init__(self):
         """Constructs a new instance of Hilo with a value and points attribute.
