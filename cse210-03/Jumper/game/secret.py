@@ -7,6 +7,6 @@ class Secret:
         self._words = ""
     
     def get_word(self):
-        self._words = "write short answer question submit learn times anytime course your mastery "
+        self._words = "answer"
         self._words = list(map(str, self._words.split()))
         return random.choice(self._words)
