@@ -1,31 +1,62 @@
 class Jumper:
-    "This class is for every wrong guess"
-    def __init__(self):
-        
-        self._lives = 4
-        
+    def __init__(self, ):
+        self._alive = "O"
+        self._line_1 = "  ___"
+        self._line_2 = "/ ___ \ "
+        self._line_3 = "\     /"
+        self._line_4 = " \   /"
+        self._line_5 = "   "
+        self._line_6 = "  /|\ "
+        self._line_7 = "  / \ "
+        self._line_8 = "⌃⌃⌃⌃⌃⌃⌃"
 
-    def display(self):
-        file = open("Week5/Jumper Incompete/Text/Parachute.txt", "r")
-        parachute = file.readlines()
-        
-        #parachute = ["  ___", "/ ___ \ ", "\     /", " \   /", "   O", "  /|\ ", "  / \ ", "⌃⌃⌃⌃⌃⌃⌃"]
-        if self._lives == 4:
-            for x in range(4-self._lives, len(parachute)):
-                print(parachute[x])
 
-        elif self._lives == 3:
-            for x in range(4-self._lives, len(parachute)):
-                print(parachute[x])
+    def get_alive(self):
+        self._alive = "x"
 
-        elif self._lives == 2:
-            for x in range(4-self._lives, len(parachute)):
-                print(parachute[x])
+    def display(self, number):
+        self.check = number
+        if self.check == 4:
+            print(self._line_1)
+            print(self._line_2)
+            print(self._line_3)
+            print(self._line_4)
+            print(self._line_5 + self._alive)
+            print(self._line_6)
+            print(self._line_7)
+            print("")
+            print(self._line_8)
+        if self.check == 3:
+            print(self._line_2)
+            print(self._line_3)
+            print(self._line_4)
+            print(self._line_5 + self._alive)
+            print(self._line_6)
+            print(self._line_7)
+            print("")
+            print(self._line_8)
+        if self.check == 2:
+            print(self._line_3)
+            print(self._line_4)
+            print(self._line_5 + self._alive)
+            print(self._line_6)
+            print(self._line_7)
+            print("")
+            print(self._line_8)
+        if self.check == 1:
+            print(self._line_4)
+            print(self._line_5 + self._alive)
+            print(self._line_6)
+            print(self._line_7)
+            print("")
+            print(self._line_8)
+        if self.check == 0:
+            self.get_alive()
+            print(self._line_5 + self._alive)
+            print(self._line_6)
+            print(self._line_7)
+            print("")
+            print(self._line_8)
 
-        elif self._lives == 1:
-            for x in range(4-self._lives, len(parachute)):
-                print(parachute[x])
-
-        elif self._lives == 0:
-            for x in range(4-self._lives, len(parachute)):
-                print(parachute[x])
+    def update(self):
+        return 1
