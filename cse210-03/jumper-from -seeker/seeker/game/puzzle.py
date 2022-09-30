@@ -3,15 +3,16 @@ import random
 class Puzzle:
 
     def __init__(self):
-        self._word_list = ["puzzle","jumper"]
         self._word_selected = ""
-
-        self._word_guess = ["_ "] * len(self._word_selected)
 
     
     def _select_word(self):
         #self._word_selected = 
-        pass
+
+        self._words_list = "answer jumper"
+        self._words_list = list(map(str, self._words_list.split()))
+        
+        return random.choice(self._words_list)
 
     def draw_word_guess(self):
         pass

@@ -21,9 +21,9 @@ class Director:
         Args:
             self (Director): an instance of Director.
         """
-        self._hider = Hider()
+        self._jumper = Jumper()
         self._is_playing = True
-        self._seeker = Seeker()
+        self._puzzle = Puzzle()
         self._terminal_service = TerminalService()
         
     def start_game(self):
@@ -44,7 +44,7 @@ class Director:
             self (Director): An instance of Director.
         """
         guess_letter = self._terminal_service.read_text("\nGuess a letter [a-z]: ")
-        self._seeker.move_location(new_location)
+        self._puzzle.move_location(new_location)
         
     def _do_updates(self):
         """Keeps watch on where the seeker is moving.
