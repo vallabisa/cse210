@@ -1,3 +1,5 @@
+import random
+
 class Puzzle:
 
     def __init__(self):
