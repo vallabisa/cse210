@@ -6,4 +6,10 @@ class Artifact:
 
 
     def __init__(self):
-        
+        pass
+
+    def get_message(self):
+       pass
+
+    def set_message(self):
+        pass 
