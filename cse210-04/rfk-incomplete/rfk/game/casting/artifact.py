@@ -2,14 +2,14 @@ from game.casting.actor import Actor
 
 # TODO: Implement the Artifact class here. Don't forget to inherit from Actor!
 
-class Artifact:
+class Artifact(Actor):
 
 
     def __init__(self):
-        pass
+        self._message = ""
 
     def get_message(self):
-       pass
+       return self._message
 
-    def set_message(self):
-        pass 
+    def set_message(self, message):
+        self._message = message 
