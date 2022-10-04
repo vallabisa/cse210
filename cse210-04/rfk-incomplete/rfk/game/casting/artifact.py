@@ -6,6 +6,7 @@ class Artifact(Actor):
 
 
     def __init__(self):
+        super().__init__()
         self._message = ""
 
     def get_message(self):
